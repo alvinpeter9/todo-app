@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +13,250 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: snow;
+}
+h2 {
+  text-align: center;
+  color: gray;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+ul li {
+  margin-right: 1rem;
+}
+
+ul li a {
+  font-weight: bold;
+  font-size: 1 rem;
+  padding: 8px 10px;
+}
+ul li a.active,
+ul li a:hover {
+  background-color: snow;
+  color: #096868;
+  transition: 0.5s;
+  border-radius: 4px;
+}
+hr {
+  border: 1px solid #e8e8e8;
+}
+input[type='text'] {
+  width: 70%;
+  height: auto;
+  outline: none;
+  border: none;
+  margin: auto;
+}
+footer {
+  background-color: black;
+  padding: 20px;
+  color: white;
+  margin-bottom: 0px;
+}
+.header {
+  background: #e3e7e7;
+}
+.input-section {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  width: 80vw;
+}
+.input {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(150px + 20vw);
+  height: 55px;
+  align-items: center;
+  width: auto;
+  margin: auto;
+  background: white;
+  border-radius: 6px;
+}
+.btn {
+  height: 50px;
+  border-radius: 6px;
+  background: rgb(44, 43, 43);
+  padding: 10px 20px;
+  margin: 10px;
+  color: snow;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  box-shadow: 2px 2px 1px gray;
+}
+.btn:disabled {
+  color: gray;
+  box-shadow: none;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background: #096868;
+  border-bottom: 2px solid whitesmoke;
+  padding: 15px 30px;
+  color: snow;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border-bottom: 4px solid white;
+}
+.nav-logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: 5px;
+  text-transform: capitalize;
+}
+.nav-logo::first-letter {
+  font-size: 2rem;
+}
+.divider {
+  border-right: 2px solid snow;
+  height: 100%;
+  margin-left: 10px;
+}
+.underline {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #898b8b;
+  width: 20%;
+  margin: 30px auto;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+  font-size: small;
+}
+.card {
+  width: 300px;
+  border-radius: 6px;
+  margin: 10px;
+  padding: 10px;
+  background-color: wheat;
+  border: 2px solid whitesmoke;
+  color: black;
+  border: 2px solid #e8e8e8;
+}
+.card:nth-child(even) {
+  background-color: #096868;
+  color: white;
+}
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+  border: 0px 2px 2px 2px solid gray;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.date {
+  font-size: small;
+}
+.box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  margin: auto;
+}
+.success {
+  font-weight: normal;
+  height: 40px;
+  background: #0b6821;
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px #0b6821;
+}
+.delete {
+  font-weight: normal;
+  height: 40px;
+  background-color: rgb(226, 12, 12);
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px #a00c1d;
+}
+.card-content {
+  padding: 10px;
+  text-align: justify;
+  word-wrap: break-word;
+}
+.hamburger {
+  position: absolute;
+  right: 1.5rem;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  display: none;
+}
+
+.hamburger .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: 0.3s all;
+}
+
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+    background-position: cover;
+  }
+  .hamburger {
+    display: flex;
+    cursor: pointer;
+  }
+
+  ul {
+    flex-direction: column;
+    position: absolute;
+    top: 14vh;
+    right: -100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 86vh;
+    width: 100%;
+    align-items: center;
+    transition: right 0.3s ease-in;
+  }
+
+  ul li {
+    margin-right: 0px;
+  }
+
+  .menu-slide {
+    right: 0%;
+    transition: right 0.3s ease-in;
+  }
+
+  .cross .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .cross .bar:first-child {
+    transform: rotate(-45deg) translate(-5px, 7px);
+  }
+  .cross .bar:last-child {
+    transform: rotate(45deg) translate(-5px, -7px);
+  }
 }
